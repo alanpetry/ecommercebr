@@ -21,24 +21,9 @@ EMAIL_RE = re.compile(r"(?i)\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b")
 PHONE_RE = re.compile(r"(?<!\d)(?:\+?\d[\s().-]*){9,}(?!\d)")
 HANDLE_RE = re.compile(r"(?<!\w)@([A-Za-z0-9_]{5,32})")
 MULTISPACE_RE = re.compile(r"[ \t]{2,}")
-
-HARD_SPAM_PATTERNS = [
-    r"(?i)\b(chama no privado|me chama no pv|link na bio|arrasta pra cima)\b",
-    r"(?i)\b(chamar no privado|me chama aqui|manda mensagem no privado|mandar mensagem no meu privado)\b",
-    r"(?i)\b(entre em contato|entrar em contato|falar comigo no privado)\b",
-    r"(?i)\b(vagas gr[aá]tis|vagas gratuitas|vagas limitadas|grupo vip|grupo exclusivo)\b",
-    r"(?i)\b(ofere[cç]o|estou oferecendo|servi[cç]os prestados|presta[cç][aã]o de servi[cç]os|proposta de trabalho)\b",
-    r"(?i)\b(consultoria individual|mentoria|curso completo|assistente virtual|suporte via whatsapp)\b",
-    r"(?i)\b(desbloqueio.*mercado livre|bloqueio de contas|solu[cç][oõ]es jur[ií]dicas|consultoria jur[ií]dica)\b",
-    r"(?i)\b(escrit[oó]rio de contabilidade|live gratuita|quer vender mais)\b",
-    r"(?i)\b(compre agora|aproveite agora|oferta imperd[ií]vel)\b",
-]
-
-SOFT_SPAM_PATTERNS = [
-    r"(?i)\b(cupom|promo[cç][aã]o|oferta imperd[ií]vel|frete gr[aá]tis)\b",
-    r"(?i)\b(ganhe dinheiro|renda extra|curso completo|mentoria|grupo vip)\b",
-    r"(?i)\b(divulgar|divulga[cç][aã]o|parceiros|clientes|custo-benef[ií]cio)\b",
-]
+LINK_PLACEHOLDER = "[link oculto]"
+EMAIL_PLACEHOLDER = "[email oculto]"
+PHONE_PLACEHOLDER = "[telefone oculto]"
 
 
 def load_json(path: Path, default: Any) -> Any:
@@ -65,33 +50,40 @@ def stable_id(*parts: object, length: int = 16) -> str:
 
 
 def sanitize_text(text: str) -> tuple[str, dict[str, bool]]:
+    text = (
+        text.replace("[link removido]", LINK_PLACEHOLDER)
+        .replace("[email removido]", EMAIL_PLACEHOLDER)
+        .replace("[telefone removido]", PHONE_PLACEHOLDER)
+    )
     flags = {
         "had_link": bool(URL_RE.search(text)),
         "had_email": bool(EMAIL_RE.search(text)),
         "had_phone": bool(PHONE_RE.search(text)),
     }
-    text = URL_RE.sub("[link removido]", text)
-    text = EMAIL_RE.sub("[email removido]", text)
-    text = PHONE_RE.sub("[telefone removido]", text)
+    text = URL_RE.sub(LINK_PLACEHOLDER, text)
+    text = EMAIL_RE.sub(EMAIL_PLACEHOLDER, text)
+    text = PHONE_RE.sub(PHONE_PLACEHOLDER, text)
     text = re.sub(r"\n{3,}", "\n\n", text)
     text = MULTISPACE_RE.sub(" ", text).strip()
     return text, flags
 
 
-def looks_like_spam(original: str, sanitized: str, flags: dict[str, bool]) -> bool:
-    lower = original.lower()
-    if any(re.search(pattern, lower) for pattern in HARD_SPAM_PATTERNS):
-        return True
+def privacy_block_reason(sanitized: str, flags: dict[str, bool]) -> str | None:
     if flags.get("had_phone") or flags.get("had_email"):
-        return True
-    if flags.get("had_link") and any(re.search(pattern, lower) for pattern in SOFT_SPAM_PATTERNS):
-        return True
-    if sum(1 for pattern in SOFT_SPAM_PATTERNS if re.search(pattern, lower)) >= 2:
-        return True
-    if sanitized.count("[link removido]") >= 2:
-        return True
-    meaningful = sanitized.replace("[link removido]", "").strip()
-    return len(meaningful) < 12
+        return "privacy"
+    meaningful = (
+        sanitized.replace(LINK_PLACEHOLDER, "")
+        .replace(EMAIL_PLACEHOLDER, "")
+        .replace(PHONE_PLACEHOLDER, "")
+        .strip()
+    )
+    if len(meaningful) < 12:
+        return "empty_after_sanitization"
+    return None
+
+
+def looks_like_spam(original: str, sanitized: str, flags: dict[str, bool]) -> bool:
+    return privacy_block_reason(sanitized, flags) is not None
 
 
 def public_author(sender: Any) -> str:
@@ -119,6 +111,13 @@ def infer_tags(text: str, tag_config: dict[str, list[str]]) -> list[str]:
                 tags.append(tag)
                 break
     return sorted(set(tags))
+
+
+def compact_text(text: str, limit: int = 180) -> str:
+    text = re.sub(r"\s+", " ", text).strip()
+    if len(text) <= limit:
+        return text
+    return text[: max(0, limit - 1)].rstrip() + "…"
 
 
 def isoformat(dt: datetime | None = None) -> str:

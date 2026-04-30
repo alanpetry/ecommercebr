@@ -4,33 +4,184 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Tags · E-commerce BR</title>
-  <meta name="description" content="Uma base pública e pesquisável com conversas, dúvidas e experiências práticas sobre marketplaces, operação, tráfego, logística, fiscal, automações e plataformas de e-commerce.">
+  <meta name="description" content="Conversas reais da comunidade sobre marketplaces, operação, tráfego, logística, fiscal, automações e plataformas de e-commerce.">
   <meta name="robots" content="index,follow">
   <meta property="og:title" content="Tags · E-commerce BR">
-  <meta property="og:description" content="Uma base pública e pesquisável com conversas, dúvidas e experiências práticas sobre marketplaces, operação, tráfego, logística, fiscal, automações e plataformas de e-commerce.">
+  <meta property="og:description" content="Conversas reais da comunidade sobre marketplaces, operação, tráfego, logística, fiscal, automações e plataformas de e-commerce.">
   <meta property="og:type" content="website">
   <script>window.SITE_BASE_PATH = "/ecommercebr";</script>
   <link rel="icon" href="/ecommercebr/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/ecommercebr/assets/styles.css">
-  <script defer src="/ecommercebr/assets/search.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/ScrollTrigger.min.js"></script>
+  <script defer src="/ecommercebr/assets/app.js"></script>
 </head>
 <body>
-  <header class="site-header">
+  <header class="topbar">
     <a class="brand" href="/ecommercebr/">
-      <span class="brand-mark">BR</span>
-      <span>
-        <strong>E-commerce BR</strong>
-        <small>Discussões reais de vendedores e operadores de e-commerce no Brasil.</small>
-      </span>
+      <span class="brand-mark">EC</span>
+      <span><strong>E-commerce BR</strong><small>arquivo público da comunidade</small></span>
     </a>
-    <nav class="nav"><a class="nav-link " href="/ecommercebr/index.html">Início</a><a class="nav-link " href="/ecommercebr/grupos/index.html">Grupos</a><a class="nav-link is-active" href="/ecommercebr/tags/index.html">Tags</a><a class="nav-link " href="/ecommercebr/busca.html">Busca</a></nav>
+    <nav class="topnav">
+      <a href="/ecommercebr/">Chat</a>
+      <a href="/ecommercebr/grupos/">Grupos</a>
+      <a href="/ecommercebr/tags/">Tags</a>
+      <a href="/ecommercebr/busca.html">Busca</a>
+    </nav>
+    <a class="join-button " href="https://t.me/addlist/8l7qOvRD_8Y1MzUx" target="_blank" rel="noopener">Entrar na comunidade</a>
   </header>
-  <main>
-<section class="page-head"><h1>Tags</h1><p>Use tags para encontrar rapidamente discussões por assunto.</p></section>
-<section class="tag-cloud"><a class="tag" href="/ecommercebr/tags/ads/">#ads (11)</a><a class="tag" href="/ecommercebr/tags/api-automacoes/">#api-automacoes (7)</a><a class="tag" href="/ecommercebr/tags/erp-hubs/">#erp-hubs (9)</a><a class="tag" href="/ecommercebr/tags/fiscal/">#fiscal (10)</a><a class="tag" href="/ecommercebr/tags/importacao/">#importacao (22)</a><a class="tag" href="/ecommercebr/tags/logistica/">#logistica (9)</a><a class="tag" href="/ecommercebr/tags/marketplaces/">#marketplaces (36)</a><a class="tag" href="/ecommercebr/tags/plataformas/">#plataformas (2)</a></section>
+  <div class="app-layout">
+    <aside class="sidebar reveal">
+      <div class="sidebar-head">
+        <strong>Grupos</strong>
+        <span>15</span>
+      </div>
+      <div class="group-list">
+<a class="group-link " href="/ecommercebr/grupos/mercado-livre/">
+  <span class="avatar avatar-sm"><img src="/ecommercebr/media/groups/mercado-livre.jpg" alt="" loading="lazy"></span>
+  <span class="group-link-main">
+    <strong>Mercado Livre</strong>
+    <small>171 mensagens</small>
+  </span>
+  <span class="group-link-date">29/04</span>
+</a>
+
+<a class="group-link " href="/ecommercebr/grupos/ads-google-e-meta/">
+  <span class="avatar avatar-sm"><img src="/ecommercebr/media/groups/ads-google-e-meta.jpg" alt="" loading="lazy"></span>
+  <span class="group-link-main">
+    <strong>Ads Google e Meta</strong>
+    <small>0 mensagens</small>
+  </span>
+  <span class="group-link-date">Sem msgs</span>
+</a>
+
+<a class="group-link " href="/ecommercebr/grupos/amazon/">
+  <span class="avatar avatar-sm"><img src="/ecommercebr/media/groups/amazon.jpg" alt="" loading="lazy"></span>
+  <span class="group-link-main">
+    <strong>Amazon</strong>
+    <small>0 mensagens</small>
+  </span>
+  <span class="group-link-date">Sem msgs</span>
+</a>
+
+<a class="group-link " href="/ecommercebr/grupos/americanas/">
+  <span class="avatar avatar-sm"><img src="/ecommercebr/media/groups/americanas.jpg" alt="" loading="lazy"></span>
+  <span class="group-link-main">
+    <strong>Americanas</strong>
+    <small>0 mensagens</small>
+  </span>
+  <span class="group-link-date">Sem msgs</span>
+</a>
+
+<a class="group-link " href="/ecommercebr/grupos/api-e-automacoes/">
+  <span class="avatar avatar-sm"><img src="/ecommercebr/media/groups/api-e-automacoes.jpg" alt="" loading="lazy"></span>
+  <span class="group-link-main">
+    <strong>API e Automações</strong>
+    <small>0 mensagens</small>
+  </span>
+  <span class="group-link-date">Sem msgs</span>
+</a>
+
+<a class="group-link " href="/ecommercebr/grupos/erp-e-hubs/">
+  <span class="avatar avatar-sm"><img src="/ecommercebr/media/groups/erp-e-hubs.jpg" alt="" loading="lazy"></span>
+  <span class="group-link-main">
+    <strong>ERP e Hubs</strong>
+    <small>0 mensagens</small>
+  </span>
+  <span class="group-link-date">Sem msgs</span>
+</a>
+
+<a class="group-link " href="/ecommercebr/grupos/fiscal-e-tributario/">
+  <span class="avatar avatar-sm"><img src="/ecommercebr/media/groups/fiscal-e-tributario.jpg" alt="" loading="lazy"></span>
+  <span class="group-link-main">
+    <strong>Fiscal e Tributário</strong>
+    <small>0 mensagens</small>
+  </span>
+  <span class="group-link-date">Sem msgs</span>
+</a>
+
+<a class="group-link " href="/ecommercebr/grupos/importacao/">
+  <span class="avatar avatar-sm"><img src="/ecommercebr/media/groups/importacao.jpg" alt="" loading="lazy"></span>
+  <span class="group-link-main">
+    <strong>Importação</strong>
+    <small>0 mensagens</small>
+  </span>
+  <span class="group-link-date">Sem msgs</span>
+</a>
+
+<a class="group-link " href="/ecommercebr/grupos/logistica/">
+  <span class="avatar avatar-sm"><img src="/ecommercebr/media/groups/logistica.jpg" alt="" loading="lazy"></span>
+  <span class="group-link-main">
+    <strong>Logística</strong>
+    <small>0 mensagens</small>
+  </span>
+  <span class="group-link-date">Sem msgs</span>
+</a>
+
+<a class="group-link " href="/ecommercebr/grupos/magalu/">
+  <span class="avatar avatar-sm"><img src="/ecommercebr/media/groups/magalu.jpg" alt="" loading="lazy"></span>
+  <span class="group-link-main">
+    <strong>Magalu</strong>
+    <small>0 mensagens</small>
+  </span>
+  <span class="group-link-date">Sem msgs</span>
+</a>
+
+<a class="group-link " href="/ecommercebr/grupos/plataformas-de-e-commerce/">
+  <span class="avatar avatar-sm"><img src="/ecommercebr/media/groups/plataformas-de-e-commerce.jpg" alt="" loading="lazy"></span>
+  <span class="group-link-main">
+    <strong>Plataformas de E-commerce</strong>
+    <small>0 mensagens</small>
+  </span>
+  <span class="group-link-date">Sem msgs</span>
+</a>
+
+<a class="group-link " href="/ecommercebr/grupos/shein/">
+  <span class="avatar avatar-sm"><img src="/ecommercebr/media/groups/shein.jpg" alt="" loading="lazy"></span>
+  <span class="group-link-main">
+    <strong>Shein</strong>
+    <small>0 mensagens</small>
+  </span>
+  <span class="group-link-date">Sem msgs</span>
+</a>
+
+<a class="group-link " href="/ecommercebr/grupos/shopee/">
+  <span class="avatar avatar-sm"><img src="/ecommercebr/media/groups/shopee.jpg" alt="" loading="lazy"></span>
+  <span class="group-link-main">
+    <strong>Shopee</strong>
+    <small>0 mensagens</small>
+  </span>
+  <span class="group-link-date">Sem msgs</span>
+</a>
+
+<a class="group-link " href="/ecommercebr/grupos/temu/">
+  <span class="avatar avatar-sm"><img src="/ecommercebr/media/groups/temu.jpg" alt="" loading="lazy"></span>
+  <span class="group-link-main">
+    <strong>Temu</strong>
+    <small>0 mensagens</small>
+  </span>
+  <span class="group-link-date">Sem msgs</span>
+</a>
+
+<a class="group-link " href="/ecommercebr/grupos/tiktok-shop/">
+  <span class="avatar avatar-sm"><img src="/ecommercebr/media/groups/tiktok-shop.jpg" alt="" loading="lazy"></span>
+  <span class="group-link-main">
+    <strong>TikTok Shop</strong>
+    <small>0 mensagens</small>
+  </span>
+  <span class="group-link-date">Sem msgs</span>
+</a></div>
+      <div class="sidebar-join">
+        <strong>Participe das conversas</strong>
+        <p>Entre pela pasta do Telegram e escolha os grupos que fazem sentido para sua operação.</p>
+        <a class="join-button " href="https://t.me/addlist/8l7qOvRD_8Y1MzUx" target="_blank" rel="noopener">Abrir pasta no Telegram</a>
+      </div>
+    </aside>
+    <main class="content-shell">
+<section class="panel reveal"><h1>Tags</h1><p>Atalhos por assunto dentro das conversas públicas.</p><a class="join-button " href="https://t.me/addlist/8l7qOvRD_8Y1MzUx" target="_blank" rel="noopener">Entrar na comunidade</a></section>
+<section class="panel reveal"><div class="tag-cloud"><a class="tag" href="/ecommercebr/tags/marketplaces/">#marketplaces (30)</a><a class="tag" href="/ecommercebr/tags/importacao/">#importacao (19)</a><a class="tag" href="/ecommercebr/tags/fiscal/">#fiscal (10)</a><a class="tag" href="/ecommercebr/tags/ads/">#ads (9)</a><a class="tag" href="/ecommercebr/tags/logistica/">#logistica (9)</a><a class="tag" href="/ecommercebr/tags/erp-hubs/">#erp-hubs (8)</a><a class="tag" href="/ecommercebr/tags/api-automacoes/">#api-automacoes (7)</a><a class="tag" href="/ecommercebr/tags/plataformas/">#plataformas (2)</a></div></section>
 </main>
-  <footer class="site-footer">
-    <p>Base pública gerada a partir de discussões sanitizadas da comunidade. Links, telefones e mensagens promocionais são filtrados antes da publicação.</p>
-  </footer>
+  </div>
+  <a class="join-fab" href="https://t.me/addlist/8l7qOvRD_8Y1MzUx" target="_blank" rel="noopener">Entrar no Telegram</a>
 </body>
 </html>

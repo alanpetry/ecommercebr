@@ -7,3 +7,4 @@ __pycache__/
 .sync-lock
 content/raw/
 content/state.json
+content/moderation/

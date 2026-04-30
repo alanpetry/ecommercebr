@@ -4,139 +4,317 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>#ads · E-commerce BR</title>
-  <meta name="description" content="Uma base pública e pesquisável com conversas, dúvidas e experiências práticas sobre marketplaces, operação, tráfego, logística, fiscal, automações e plataformas de e-commerce.">
+  <meta name="description" content="Conversas reais da comunidade sobre marketplaces, operação, tráfego, logística, fiscal, automações e plataformas de e-commerce.">
   <meta name="robots" content="index,follow">
   <meta property="og:title" content="#ads · E-commerce BR">
-  <meta property="og:description" content="Uma base pública e pesquisável com conversas, dúvidas e experiências práticas sobre marketplaces, operação, tráfego, logística, fiscal, automações e plataformas de e-commerce.">
+  <meta property="og:description" content="Conversas reais da comunidade sobre marketplaces, operação, tráfego, logística, fiscal, automações e plataformas de e-commerce.">
   <meta property="og:type" content="website">
   <script>window.SITE_BASE_PATH = "/ecommercebr";</script>
   <link rel="icon" href="/ecommercebr/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/ecommercebr/assets/styles.css">
-  <script defer src="/ecommercebr/assets/search.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/ScrollTrigger.min.js"></script>
+  <script defer src="/ecommercebr/assets/app.js"></script>
 </head>
 <body>
-  <header class="site-header">
+  <header class="topbar">
     <a class="brand" href="/ecommercebr/">
-      <span class="brand-mark">BR</span>
-      <span>
-        <strong>E-commerce BR</strong>
-        <small>Discussões reais de vendedores e operadores de e-commerce no Brasil.</small>
-      </span>
+      <span class="brand-mark">EC</span>
+      <span><strong>E-commerce BR</strong><small>arquivo público da comunidade</small></span>
     </a>
-    <nav class="nav"><a class="nav-link " href="/ecommercebr/index.html">Início</a><a class="nav-link " href="/ecommercebr/grupos/index.html">Grupos</a><a class="nav-link is-active" href="/ecommercebr/tags/index.html">Tags</a><a class="nav-link " href="/ecommercebr/busca.html">Busca</a></nav>
+    <nav class="topnav">
+      <a href="/ecommercebr/">Chat</a>
+      <a href="/ecommercebr/grupos/">Grupos</a>
+      <a href="/ecommercebr/tags/">Tags</a>
+      <a href="/ecommercebr/busca.html">Busca</a>
+    </nav>
+    <a class="join-button " href="https://t.me/addlist/8l7qOvRD_8Y1MzUx" target="_blank" rel="noopener">Entrar na comunidade</a>
   </header>
-  <main><section class="page-head"><h1>#ads</h1><p>11 mensagens relacionadas.</p></section><section class="message-list">
-<article class="message-card " id="f8e9fe4c458b6e47">
-  <header>
-    <strong>@Petcenterbrasil</strong>
-    <span>29/04/2026</span>
-    <span><a href="/ecommercebr/grupos/mercado-livre/">Mercado Livre</a></span>
-  </header>
-  <p>Pessoal o ads vicia um anúncio? Fica sem vender se pausa anúncio ? Vejo que está cada vez mais difícil vender sem ads</p>
-  <footer><a class="tag" href="/ecommercebr/tags/ads/">#ads</a></footer>
+  <div class="app-layout">
+    <aside class="sidebar reveal">
+      <div class="sidebar-head">
+        <strong>Grupos</strong>
+        <span>15</span>
+      </div>
+      <div class="group-list">
+<a class="group-link " href="/ecommercebr/grupos/mercado-livre/">
+  <span class="avatar avatar-sm"><img src="/ecommercebr/media/groups/mercado-livre.jpg" alt="" loading="lazy"></span>
+  <span class="group-link-main">
+    <strong>Mercado Livre</strong>
+    <small>171 mensagens</small>
+  </span>
+  <span class="group-link-date">29/04</span>
+</a>
+
+<a class="group-link " href="/ecommercebr/grupos/ads-google-e-meta/">
+  <span class="avatar avatar-sm"><img src="/ecommercebr/media/groups/ads-google-e-meta.jpg" alt="" loading="lazy"></span>
+  <span class="group-link-main">
+    <strong>Ads Google e Meta</strong>
+    <small>0 mensagens</small>
+  </span>
+  <span class="group-link-date">Sem msgs</span>
+</a>
+
+<a class="group-link " href="/ecommercebr/grupos/amazon/">
+  <span class="avatar avatar-sm"><img src="/ecommercebr/media/groups/amazon.jpg" alt="" loading="lazy"></span>
+  <span class="group-link-main">
+    <strong>Amazon</strong>
+    <small>0 mensagens</small>
+  </span>
+  <span class="group-link-date">Sem msgs</span>
+</a>
+
+<a class="group-link " href="/ecommercebr/grupos/americanas/">
+  <span class="avatar avatar-sm"><img src="/ecommercebr/media/groups/americanas.jpg" alt="" loading="lazy"></span>
+  <span class="group-link-main">
+    <strong>Americanas</strong>
+    <small>0 mensagens</small>
+  </span>
+  <span class="group-link-date">Sem msgs</span>
+</a>
+
+<a class="group-link " href="/ecommercebr/grupos/api-e-automacoes/">
+  <span class="avatar avatar-sm"><img src="/ecommercebr/media/groups/api-e-automacoes.jpg" alt="" loading="lazy"></span>
+  <span class="group-link-main">
+    <strong>API e Automações</strong>
+    <small>0 mensagens</small>
+  </span>
+  <span class="group-link-date">Sem msgs</span>
+</a>
+
+<a class="group-link " href="/ecommercebr/grupos/erp-e-hubs/">
+  <span class="avatar avatar-sm"><img src="/ecommercebr/media/groups/erp-e-hubs.jpg" alt="" loading="lazy"></span>
+  <span class="group-link-main">
+    <strong>ERP e Hubs</strong>
+    <small>0 mensagens</small>
+  </span>
+  <span class="group-link-date">Sem msgs</span>
+</a>
+
+<a class="group-link " href="/ecommercebr/grupos/fiscal-e-tributario/">
+  <span class="avatar avatar-sm"><img src="/ecommercebr/media/groups/fiscal-e-tributario.jpg" alt="" loading="lazy"></span>
+  <span class="group-link-main">
+    <strong>Fiscal e Tributário</strong>
+    <small>0 mensagens</small>
+  </span>
+  <span class="group-link-date">Sem msgs</span>
+</a>
+
+<a class="group-link " href="/ecommercebr/grupos/importacao/">
+  <span class="avatar avatar-sm"><img src="/ecommercebr/media/groups/importacao.jpg" alt="" loading="lazy"></span>
+  <span class="group-link-main">
+    <strong>Importação</strong>
+    <small>0 mensagens</small>
+  </span>
+  <span class="group-link-date">Sem msgs</span>
+</a>
+
+<a class="group-link " href="/ecommercebr/grupos/logistica/">
+  <span class="avatar avatar-sm"><img src="/ecommercebr/media/groups/logistica.jpg" alt="" loading="lazy"></span>
+  <span class="group-link-main">
+    <strong>Logística</strong>
+    <small>0 mensagens</small>
+  </span>
+  <span class="group-link-date">Sem msgs</span>
+</a>
+
+<a class="group-link " href="/ecommercebr/grupos/magalu/">
+  <span class="avatar avatar-sm"><img src="/ecommercebr/media/groups/magalu.jpg" alt="" loading="lazy"></span>
+  <span class="group-link-main">
+    <strong>Magalu</strong>
+    <small>0 mensagens</small>
+  </span>
+  <span class="group-link-date">Sem msgs</span>
+</a>
+
+<a class="group-link " href="/ecommercebr/grupos/plataformas-de-e-commerce/">
+  <span class="avatar avatar-sm"><img src="/ecommercebr/media/groups/plataformas-de-e-commerce.jpg" alt="" loading="lazy"></span>
+  <span class="group-link-main">
+    <strong>Plataformas de E-commerce</strong>
+    <small>0 mensagens</small>
+  </span>
+  <span class="group-link-date">Sem msgs</span>
+</a>
+
+<a class="group-link " href="/ecommercebr/grupos/shein/">
+  <span class="avatar avatar-sm"><img src="/ecommercebr/media/groups/shein.jpg" alt="" loading="lazy"></span>
+  <span class="group-link-main">
+    <strong>Shein</strong>
+    <small>0 mensagens</small>
+  </span>
+  <span class="group-link-date">Sem msgs</span>
+</a>
+
+<a class="group-link " href="/ecommercebr/grupos/shopee/">
+  <span class="avatar avatar-sm"><img src="/ecommercebr/media/groups/shopee.jpg" alt="" loading="lazy"></span>
+  <span class="group-link-main">
+    <strong>Shopee</strong>
+    <small>0 mensagens</small>
+  </span>
+  <span class="group-link-date">Sem msgs</span>
+</a>
+
+<a class="group-link " href="/ecommercebr/grupos/temu/">
+  <span class="avatar avatar-sm"><img src="/ecommercebr/media/groups/temu.jpg" alt="" loading="lazy"></span>
+  <span class="group-link-main">
+    <strong>Temu</strong>
+    <small>0 mensagens</small>
+  </span>
+  <span class="group-link-date">Sem msgs</span>
+</a>
+
+<a class="group-link " href="/ecommercebr/grupos/tiktok-shop/">
+  <span class="avatar avatar-sm"><img src="/ecommercebr/media/groups/tiktok-shop.jpg" alt="" loading="lazy"></span>
+  <span class="group-link-main">
+    <strong>TikTok Shop</strong>
+    <small>0 mensagens</small>
+  </span>
+  <span class="group-link-date">Sem msgs</span>
+</a></div>
+      <div class="sidebar-join">
+        <strong>Participe das conversas</strong>
+        <p>Entre pela pasta do Telegram e escolha os grupos que fazem sentido para sua operação.</p>
+        <a class="join-button " href="https://t.me/addlist/8l7qOvRD_8Y1MzUx" target="_blank" rel="noopener">Abrir pasta no Telegram</a>
+      </div>
+    </aside>
+    <main class="content-shell">
+<section class="panel reveal"><h1>#ads</h1><p>9 mensagens relacionadas.</p><a class="join-button " href="https://t.me/addlist/8l7qOvRD_8Y1MzUx" target="_blank" rel="noopener">Entrar na pasta do Telegram</a></section>
+<section class="chat-window"><div class="date-divider"><span>12/12/2025</span></div>
+
+<article class="message-row reveal" id="2bd0c46e7a286a04">
+  <span class="avatar avatar-xs"><img src="/ecommercebr/media/groups/mercado-livre.jpg" alt="" loading="lazy"></span>
+  <div class="message-bubble">
+    <header>
+      <strong>@alanmpetry</strong>
+      <span>11:44</span>
+      <a href="/ecommercebr/grupos/mercado-livre/">Mercado Livre</a>
+    </header>
+    <a class="reply-preview" href="#66ddb48461955fff"><strong>@Feesilviaa25</strong><span>Na verdade to comencando. É dica para quem ta iniciando na jornada</span></a>
+    <p>Para aproveitar as datas a melhor coisa é conseguir entrar nas campanhas do ML</p>
+    <footer><a class="tag" href="/ecommercebr/tags/ads/">#ads</a></footer>
+  </div>
 </article>
 
-<article class="message-card " id="f010644466c098ab">
-  <header>
-    <strong>Renato</strong>
-    <span>08/03/2026</span>
-    <span><a href="/ecommercebr/grupos/mercado-livre/">Mercado Livre</a></span>
-  </header>
-  <p>⚠️ *Erro comum ao criar campanhas de Mercado Livre Ads:*<br>Ter vários anúncios dentro da mesma campanha.<br>Na prática, essa estrutura costuma travar o crescimento e gerar desperdício de verba.<br><br>Estrutura correta e eficiente costuma ser:<br>📦 1 campanha com apenas 1 anúncio dentro.<br><br>Assim você tem controle total do desempenho e consegue escalar com muito mais precisão.<br><br>Já comprovei isso na prática com mais de 30 clientes!</p>
-  <footer><a class="tag" href="/ecommercebr/tags/ads/">#ads</a><a class="tag" href="/ecommercebr/tags/marketplaces/">#marketplaces</a></footer>
-</article>
+<article class="message-row reveal" id="1881071ad56811c5">
+  <span class="avatar avatar-xs"><img src="/ecommercebr/media/groups/mercado-livre.jpg" alt="" loading="lazy"></span>
+  <div class="message-bubble">
+    <header>
+      <strong>@alanmpetry</strong>
+      <span>11:45</span>
+      <a href="/ecommercebr/grupos/mercado-livre/">Mercado Livre</a>
+    </header>
 
-<article class="message-card " id="c7acb1e61a3ec5f5">
-  <header>
-    <strong>Suellen</strong>
-    <span>24/02/2026</span>
-    <span><a href="/ecommercebr/grupos/mercado-livre/">Mercado Livre</a></span>
-  </header>
-  <p>Bom dia, meu painel de publicidades de campanha desligou sem motivo aparente, das minhas duas contas. Já entrei em contato e consta tudo certo. Mas alguém está com isso hoje? Alguma dica?</p>
-  <footer><a class="tag" href="/ecommercebr/tags/ads/">#ads</a></footer>
+    <p>Mesmo que durante o mês o preço do seu produto esteja mais alto, entrando em campanhas consegue bastante visibilidade</p>
+    <footer><a class="tag" href="/ecommercebr/tags/ads/">#ads</a></footer>
+  </div>
 </article>
+<div class="date-divider"><span>05/01/2026</span></div>
 
-<article class="message-card " id="e4bee5972189d8b2">
-  <header>
-    <strong>REGINALDO</strong>
-    <span>18/02/2026</span>
-    <span><a href="/ecommercebr/grupos/mercado-livre/">Mercado Livre</a></span>
-  </header>
-  <p>Boa tarde pessoal, tudo bem? Desenvolvi uma ferramenta de tráfego especializado focada em SEO e posicionamento orgânico para Mercado Livre. Criei esse sistema justamente para ajudar quem está gastando muito com Ads e não vê o anúncio subir de posição. Ela trabalha com retenção real na página, sinalizando relevância para o algoritmo. Alguém aqui gostaria de fazer um teste gratuito para ver as visitas subindo no painel? Posso enviar um vídeo demonstrativo também!</p>
-  <footer><a class="tag" href="/ecommercebr/tags/ads/">#ads</a><a class="tag" href="/ecommercebr/tags/importacao/">#importacao</a><a class="tag" href="/ecommercebr/tags/marketplaces/">#marketplaces</a></footer>
+<article class="message-row reveal" id="d9628abf70cece80">
+  <span class="avatar avatar-xs"><img src="/ecommercebr/media/groups/mercado-livre.jpg" alt="" loading="lazy"></span>
+  <div class="message-bubble">
+    <header>
+      <strong>Matheus</strong>
+      <span>23:02</span>
+      <a href="/ecommercebr/grupos/mercado-livre/">Mercado Livre</a>
+    </header>
+
+    <p>isso pode ajudar a ter mais cliques nos seus anúncios, e consequentemente mais vendas</p>
+    <footer><a class="tag" href="/ecommercebr/tags/ads/">#ads</a></footer>
+  </div>
 </article>
+<div class="date-divider"><span>05/02/2026</span></div>
 
-<article class="message-card " id="e18af77fffc5aabf">
-  <header>
-    <strong>Gentil</strong>
-    <span>18/02/2026</span>
-    <span><a href="/ecommercebr/grupos/mercado-livre/">Mercado Livre</a></span>
-  </header>
-  <p>Eu tenho tido bastante sucesso usando IA para elaborar fotos e descrição. <br><br>Se alguém quiser um anuncio de referência feito com IA, é só chamar e eu mando o link.<br><br>Acho que enviar o link aqui no grupo pode ir contra as regras.</p>
-  <footer><a class="tag" href="/ecommercebr/tags/ads/">#ads</a></footer>
+<article class="message-row reveal" id="f4a0511350358c93">
+  <span class="avatar avatar-xs"><img src="/ecommercebr/media/groups/mercado-livre.jpg" alt="" loading="lazy"></span>
+  <div class="message-bubble">
+    <header>
+      <strong>José</strong>
+      <span>09:53</span>
+      <a href="/ecommercebr/grupos/mercado-livre/">Mercado Livre</a>
+    </header>
+
+    <p>Bom dia a todos alguém aí pra me dar uma dica de produto para revender todos os dias fornecedor e preço que devo colocar estou com 200 anúncios vendendo pingado por semana</p>
+    <footer><a class="tag" href="/ecommercebr/tags/ads/">#ads</a><a class="tag" href="/ecommercebr/tags/importacao/">#importacao</a></footer>
+  </div>
 </article>
+<div class="date-divider"><span>11/02/2026</span></div>
 
-<article class="message-card " id="7e4da667927033df">
-  <header>
-    <strong>Ricardo</strong>
-    <span>18/02/2026</span>
-    <span><a href="/ecommercebr/grupos/mercado-livre/">Mercado Livre</a></span>
-  </header>
-  <p>ML e mais moroso o processo de venda...muita concorrência, tem q caprichar no anúncio, nas fotos...e vejo muita gente falando do &quot;programa decola&quot; ...250,00 funciona mais ou menos como um cheque calção ...o ML devolve após atingir as primeiras vendas</p>
-  <footer><a class="tag" href="/ecommercebr/tags/ads/">#ads</a></footer>
+<article class="message-row reveal" id="8051eaffca9d9fe3">
+  <span class="avatar avatar-xs"><img src="/ecommercebr/media/groups/mercado-livre.jpg" alt="" loading="lazy"></span>
+  <div class="message-bubble">
+    <header>
+      <strong>Milleny</strong>
+      <span>15:48</span>
+      <a href="/ecommercebr/grupos/mercado-livre/">Mercado Livre</a>
+    </header>
+
+    <p>Olá, pessoal! 😊<br>Trabalho com cadastro profissional de produtos no Mercado Livre, Shopee e Bling.<br>Auxilio na organização dos anúncios, com título claro, descrição padronizada e categoria correta, evitando erros na publicação.<br>Caso alguém precise de ajuda com cadastro ou organização de produtos, fico à disposição para conversar.</p>
+    <footer><a class="tag" href="/ecommercebr/tags/ads/">#ads</a><a class="tag" href="/ecommercebr/tags/erp-hubs/">#erp-hubs</a><a class="tag" href="/ecommercebr/tags/marketplaces/">#marketplaces</a></footer>
+  </div>
 </article>
+<div class="date-divider"><span>18/02/2026</span></div>
 
-<article class="message-card " id="8051eaffca9d9fe3">
-  <header>
-    <strong>Milleny</strong>
-    <span>11/02/2026</span>
-    <span><a href="/ecommercebr/grupos/mercado-livre/">Mercado Livre</a></span>
-  </header>
-  <p>Olá, pessoal! 😊<br>Trabalho com cadastro profissional de produtos no Mercado Livre, Shopee e Bling.<br>Auxilio na organização dos anúncios, com título claro, descrição padronizada e categoria correta, evitando erros na publicação.<br>Caso alguém precise de ajuda com cadastro ou organização de produtos, fico à disposição para conversar.</p>
-  <footer><a class="tag" href="/ecommercebr/tags/ads/">#ads</a><a class="tag" href="/ecommercebr/tags/erp-hubs/">#erp-hubs</a><a class="tag" href="/ecommercebr/tags/marketplaces/">#marketplaces</a></footer>
+<article class="message-row reveal" id="7e4da667927033df">
+  <span class="avatar avatar-xs"><img src="/ecommercebr/media/groups/mercado-livre.jpg" alt="" loading="lazy"></span>
+  <div class="message-bubble">
+    <header>
+      <strong>Ricardo</strong>
+      <span>13:43</span>
+      <a href="/ecommercebr/grupos/mercado-livre/">Mercado Livre</a>
+    </header>
+    <a class="reply-preview" href="#c426c0a306181a72"><strong>Eliane</strong><span>Bom dia abrir uma conta no mercado livre trabalho com bolsas personalizadas pra aniversário e eventos pra vender em kits quantidade precisando de dicas não tive nenhuma venda</span></a>
+    <p>ML e mais moroso o processo de venda...muita concorrência, tem q caprichar no anúncio, nas fotos...e vejo muita gente falando do &quot;programa decola&quot; ...250,00 funciona mais ou menos como um cheque calção ...o ML devolve após atingir as primeiras vendas</p>
+    <footer><a class="tag" href="/ecommercebr/tags/ads/">#ads</a></footer>
+  </div>
 </article>
+<div class="date-divider"><span>24/02/2026</span></div>
 
-<article class="message-card " id="f4a0511350358c93">
-  <header>
-    <strong>José</strong>
-    <span>05/02/2026</span>
-    <span><a href="/ecommercebr/grupos/mercado-livre/">Mercado Livre</a></span>
-  </header>
-  <p>Bom dia a todos alguém aí pra me dar uma dica de produto para revender todos os dias fornecedor e preço que devo colocar estou com 200 anúncios vendendo pingado por semana</p>
-  <footer><a class="tag" href="/ecommercebr/tags/ads/">#ads</a><a class="tag" href="/ecommercebr/tags/importacao/">#importacao</a></footer>
+<article class="message-row reveal" id="c7acb1e61a3ec5f5">
+  <span class="avatar avatar-xs"><img src="/ecommercebr/media/groups/mercado-livre.jpg" alt="" loading="lazy"></span>
+  <div class="message-bubble">
+    <header>
+      <strong>Suellen</strong>
+      <span>08:59</span>
+      <a href="/ecommercebr/grupos/mercado-livre/">Mercado Livre</a>
+    </header>
+
+    <p>Bom dia, meu painel de publicidades de campanha desligou sem motivo aparente, das minhas duas contas. Já entrei em contato e consta tudo certo. Mas alguém está com isso hoje? Alguma dica?</p>
+    <footer><a class="tag" href="/ecommercebr/tags/ads/">#ads</a></footer>
+  </div>
 </article>
+<div class="date-divider"><span>08/03/2026</span></div>
 
-<article class="message-card " id="d9628abf70cece80">
-  <header>
-    <strong>Matheus</strong>
-    <span>05/01/2026</span>
-    <span><a href="/ecommercebr/grupos/mercado-livre/">Mercado Livre</a></span>
-  </header>
-  <p>isso pode ajudar a ter mais cliques nos seus anúncios, e consequentemente mais vendas</p>
-  <footer><a class="tag" href="/ecommercebr/tags/ads/">#ads</a></footer>
+<article class="message-row reveal" id="f010644466c098ab">
+  <span class="avatar avatar-xs"><img src="/ecommercebr/media/groups/mercado-livre.jpg" alt="" loading="lazy"></span>
+  <div class="message-bubble">
+    <header>
+      <strong>Renato</strong>
+      <span>19:52</span>
+      <a href="/ecommercebr/grupos/mercado-livre/">Mercado Livre</a>
+    </header>
+
+    <p>⚠️ *Erro comum ao criar campanhas de Mercado Livre Ads:*<br>Ter vários anúncios dentro da mesma campanha.<br>Na prática, essa estrutura costuma travar o crescimento e gerar desperdício de verba.<br><br>Estrutura correta e eficiente costuma ser:<br>📦 1 campanha com apenas 1 anúncio dentro.<br><br>Assim você tem controle total do desempenho e consegue escalar com muito mais precisão.<br><br>Já comprovei isso na prática com mais de 30 clientes!</p>
+    <footer><a class="tag" href="/ecommercebr/tags/ads/">#ads</a><a class="tag" href="/ecommercebr/tags/marketplaces/">#marketplaces</a></footer>
+  </div>
 </article>
+<div class="date-divider"><span>Ontem</span></div>
 
-<article class="message-card " id="1881071ad56811c5">
-  <header>
-    <strong>@alanmpetry</strong>
-    <span>12/12/2025</span>
-    <span><a href="/ecommercebr/grupos/mercado-livre/">Mercado Livre</a></span>
-  </header>
-  <p>Mesmo que durante o mês o preço do seu produto esteja mais alto, entrando em campanhas consegue bastante visibilidade</p>
-  <footer><a class="tag" href="/ecommercebr/tags/ads/">#ads</a></footer>
-</article>
+<article class="message-row reveal" id="f8e9fe4c458b6e47">
+  <span class="avatar avatar-xs"><img src="/ecommercebr/media/groups/mercado-livre.jpg" alt="" loading="lazy"></span>
+  <div class="message-bubble">
+    <header>
+      <strong>@Petcenterbrasil</strong>
+      <span>13:56</span>
+      <a href="/ecommercebr/grupos/mercado-livre/">Mercado Livre</a>
+    </header>
 
-<article class="message-card " id="2bd0c46e7a286a04">
-  <header>
-    <strong>@alanmpetry</strong>
-    <span>12/12/2025</span>
-    <span><a href="/ecommercebr/grupos/mercado-livre/">Mercado Livre</a></span>
-  </header>
-  <p>Para aproveitar as datas a melhor coisa é conseguir entrar nas campanhas do ML</p>
-  <footer><a class="tag" href="/ecommercebr/tags/ads/">#ads</a></footer>
-</article></section></main>
-  <footer class="site-footer">
-    <p>Base pública gerada a partir de discussões sanitizadas da comunidade. Links, telefones e mensagens promocionais são filtrados antes da publicação.</p>
-  </footer>
+    <p>Pessoal o ads vicia um anúncio? Fica sem vender se pausa anúncio ? Vejo que está cada vez mais difícil vender sem ads</p>
+    <footer><a class="tag" href="/ecommercebr/tags/ads/">#ads</a></footer>
+  </div>
+</article></section>
+</main>
+  </div>
+  <a class="join-fab" href="https://t.me/addlist/8l7qOvRD_8Y1MzUx" target="_blank" rel="noopener">Entrar no Telegram</a>
 </body>
 </html>

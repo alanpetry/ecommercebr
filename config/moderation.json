@@ -1,0 +1,17 @@
+{
+  "ai_provider": "codex-cli",
+  "manual_reject_ids": {
+    "782d7d68bf982335": "Convite isolado para outro grupo, fora de contexto editorial.",
+    "12831d306b937d70": "Divulgação de projeto com lista de espera e link.",
+    "d503125a4433754f": "Pré-lançamento de ERP com convite promocional.",
+    "e18af77fffc5aabf": "Oferta individual com chamada para envio de link.",
+    "e4bee5972189d8b2": "Divulgação de ferramenta própria com teste gratuito.",
+    "27bee331835a64f4": "Divulgação de produto em desenvolvimento com link.",
+    "1b31de4f8a96bd21": "Convite genérico para grupo externo.",
+    "9d5d291f44b95825": "Resposta solta ligada a conversa comercial removida.",
+    "84a6ce398a88de21": "Resposta solta ligada a conversa comercial removida.",
+    "d736fbab2d2a6776": "Pedido de compra de conta pronta de marketplace, inadequado para a base pública.",
+    "f08c81ad8c7f2ff0": "Mensagem sem contexto útil para a conversa pública.",
+    "c95869edf6f9cff8": "Mensagem sem contexto útil para a conversa pública."
+  }
+}

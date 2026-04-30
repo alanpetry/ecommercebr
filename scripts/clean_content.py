@@ -3,13 +3,13 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-from common import CONTENT_DIR, looks_like_spam, sanitize_text
+from common import CONFIG_DIR, CONTENT_DIR, load_json, privacy_block_reason, sanitize_text
 
 
 MESSAGES_DIR = CONTENT_DIR / "messages"
 
 
-def clean_file(path: Path) -> tuple[int, int]:
+def clean_file(path: Path, manual_rejects: dict[str, str]) -> tuple[int, int]:
     if not path.exists():
         return 0, 0
 
@@ -20,6 +20,9 @@ def clean_file(path: Path) -> tuple[int, int]:
             if not line.strip():
                 continue
             row = json.loads(line)
+            if row.get("id") in manual_rejects:
+                removed += 1
+                continue
             sanitized, new_flags = sanitize_text(row.get("text", ""))
             flags = row.get("flags") or {}
             merged_flags = {
@@ -27,7 +30,7 @@ def clean_file(path: Path) -> tuple[int, int]:
                 "had_email": bool(flags.get("had_email") or new_flags["had_email"]),
                 "had_phone": bool(flags.get("had_phone") or new_flags["had_phone"]),
             }
-            if looks_like_spam(row.get("text", ""), sanitized, merged_flags):
+            if privacy_block_reason(sanitized, merged_flags):
                 removed += 1
                 continue
             row["text"] = sanitized
@@ -41,10 +44,12 @@ def clean_file(path: Path) -> tuple[int, int]:
 
 
 def main() -> None:
+    moderation = load_json(CONFIG_DIR / "moderation.json", {})
+    manual_rejects = moderation.get("manual_reject_ids", {})
     total_kept = 0
     total_removed = 0
     for path in sorted(MESSAGES_DIR.glob("*.jsonl")):
-        kept, removed = clean_file(path)
+        kept, removed = clean_file(path, manual_rejects)
         total_kept += kept
         total_removed += removed
         if removed:

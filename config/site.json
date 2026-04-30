@@ -1,12 +1,13 @@
 {
   "site_name": "E-commerce BR",
   "tagline": "Discussões reais de vendedores e operadores de e-commerce no Brasil.",
-  "description": "Uma base pública e pesquisável com conversas, dúvidas e experiências práticas sobre marketplaces, operação, tráfego, logística, fiscal, automações e plataformas de e-commerce.",
+  "description": "Conversas reais da comunidade sobre marketplaces, operação, tráfego, logística, fiscal, automações e plataformas de e-commerce.",
   "base_url": "https://alanpetry.github.io/ecommercebr",
   "base_path": "/ecommercebr",
+  "telegram_join_url": "https://t.me/addlist/8l7qOvRD_8Y1MzUx",
   "language": "pt-BR",
   "timezone": "America/Sao_Paulo",
   "telegram_folder": "E-commerce",
-  "messages_per_group_home": 8,
+  "messages_per_group_home": 120,
   "messages_per_group_page": 500
 }

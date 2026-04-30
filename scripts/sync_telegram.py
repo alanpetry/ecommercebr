@@ -14,9 +14,10 @@ from common import (
     CONFIG_DIR,
     CONTENT_DIR,
     infer_tags,
+    compact_text,
     isoformat,
     load_json,
-    looks_like_spam,
+    privacy_block_reason,
     public_author,
     sanitize_text,
     save_json,
@@ -96,6 +97,33 @@ async def sync_group_photo(client: TelegramClient, entity: object, slug: str) ->
     return f"media/groups/{slug}.jpg" if dest.exists() else None
 
 
+async def reply_context(group_id: str, message: object) -> dict:
+    reply_id = getattr(message, "reply_to_msg_id", None)
+    if not reply_id:
+        reply_to = getattr(message, "reply_to", None)
+        reply_id = getattr(reply_to, "reply_to_msg_id", None)
+    if not reply_id:
+        return {}
+    context = {
+        "reply_to_telegram_message_id": int(reply_id),
+        "reply_to_id": stable_id(group_id, reply_id),
+    }
+    try:
+        replied = await message.get_reply_message()
+    except Exception:
+        replied = None
+    if replied and getattr(replied, "raw_text", None):
+        reply_text, reply_flags = sanitize_text(replied.raw_text or "")
+        if not privacy_block_reason(reply_text, reply_flags):
+            context["reply_to_text"] = compact_text(reply_text, 220)
+            try:
+                sender = await replied.get_sender()
+            except Exception:
+                sender = None
+            context["reply_to_author"] = public_author(sender) if sender else "Participante"
+    return context
+
+
 async def sync_messages(
     client: TelegramClient,
     entity: object,
@@ -116,27 +144,27 @@ async def sync_messages(
         if not raw_text.strip():
             continue
         sanitized, flags = sanitize_text(raw_text)
-        if looks_like_spam(raw_text, sanitized, flags):
+        if privacy_block_reason(sanitized, flags):
             continue
         sender = await message.get_sender()
         row_id = stable_id(group_id, message.id)
         if row_id in seen:
             continue
         tags = sorted(set(group_cfg.get("default_tags", [])) | set(infer_tags(sanitized, tag_config)))
-        rows.append(
-            {
-                "id": row_id,
-                "telegram_group_id": group_id,
-                "telegram_message_id": int(message.id),
-                "group_slug": slug,
-                "group_title": group_cfg["title"],
-                "author": public_author(sender),
-                "date": message.date.astimezone().isoformat(),
-                "text": sanitized,
-                "tags": tags,
-                "flags": flags,
-            }
-        )
+        row = {
+            "id": row_id,
+            "telegram_group_id": group_id,
+            "telegram_message_id": int(message.id),
+            "group_slug": slug,
+            "group_title": group_cfg["title"],
+            "author": public_author(sender),
+            "date": message.date.astimezone().isoformat(),
+            "text": sanitized,
+            "tags": tags,
+            "flags": flags,
+        }
+        row.update(await reply_context(group_id, message))
+        rows.append(row)
     append_jsonl(path, rows)
     return len(rows)
 
@@ -208,4 +236,3 @@ async def main() -> None:
 
 if __name__ == "__main__":
     asyncio.run(main())
-

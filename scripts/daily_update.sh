@@ -11,6 +11,7 @@ fi
 
 "$PYTHON_BIN" scripts/sync_telegram.py
 "$PYTHON_BIN" scripts/clean_content.py
+"$PYTHON_BIN" scripts/ai_moderate.py
 "$PYTHON_BIN" scripts/build_site.py
 
 if git diff --quiet -- content docs config; then

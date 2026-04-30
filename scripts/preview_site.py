@@ -23,7 +23,7 @@ def main() -> None:
             return super().translate_path(path)
 
     handler = functools.partial(Handler, directory=str(DOCS_DIR))
-    with socketserver.TCPServer(("", args.port), handler) as httpd:
+    with socketserver.ThreadingTCPServer(("", args.port), handler) as httpd:
         path = base_path or ""
         print(f"Preview em http://localhost:{args.port}{path}/")
         httpd.serve_forever()
