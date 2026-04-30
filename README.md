@@ -25,11 +25,12 @@ O site é estático e pronto para GitHub Pages. As mensagens passam por sanitiza
 
 ```bash
 ../.venv/bin/python scripts/sync_telegram.py
+../.venv/bin/python scripts/clean_content.py
 ../.venv/bin/python scripts/build_site.py
-python3 -m http.server 8080 --directory docs
+../.venv/bin/python scripts/preview_site.py --port 8080
 ```
 
-Depois acesse `http://localhost:8080`.
+Depois acesse `http://localhost:8080/ecommercebr/`.
 
 ## Publicação diária
 
@@ -43,4 +44,3 @@ cd /Users/alanpetry/Desktop/Telegram/ecommercebr
 ## Segurança editorial
 
 O filtro é conservador. Se uma mensagem tiver telefone, e-mail ou parecer divulgação, ela não entra no site. Links são removidos do texto antes de publicar.
-
