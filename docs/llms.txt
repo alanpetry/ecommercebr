@@ -1,0 +1,17 @@
+# E-commerce BR
+
+Arquivo público das conversas sanitizadas da comunidade E-commerce BR no Telegram.
+
+Conteúdo principal:
+- /ecommercebr/grupos/: lista de grupos da comunidade.
+- /ecommercebr/grupos/{grupo}/: mês mais recente publicado de cada grupo.
+- /ecommercebr/grupos/{grupo}/{YYYY-MM}/: arquivo mensal das conversas.
+- /ecommercebr/tags/: navegação por tags.
+- /ecommercebr/search.json: índice JSON sanitizado para busca local.
+- /ecommercebr/sitemap.xml: mapa completo para indexação.
+
+Política editorial:
+- Links de mensagens são ocultados.
+- Telefones e e-mails são removidos.
+- Propaganda, spam e divulgação são filtrados antes da publicação.
+- Autores aparecem como username público ou primeiro nome.
