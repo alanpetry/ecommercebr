@@ -1,0 +1,154 @@
+{
+  "groups": {
+    "3937332081": {
+      "telegram_id": "3937332081",
+      "title": "Ads Google e Meta",
+      "slug": "ads-google-e-meta",
+      "description": "",
+      "default_tags": [],
+      "public_username": null,
+      "source_title": "Ads Google e Meta",
+      "avatar": "media/groups/ads-google-e-meta.jpg"
+    },
+    "3907581653": {
+      "telegram_id": "3907581653",
+      "title": "Amazon",
+      "slug": "amazon",
+      "description": "",
+      "default_tags": [],
+      "public_username": "vendedoresamazonbr",
+      "source_title": "Amazon",
+      "avatar": "media/groups/amazon.jpg"
+    },
+    "3863593344": {
+      "telegram_id": "3863593344",
+      "title": "Americanas",
+      "slug": "americanas",
+      "description": "",
+      "default_tags": [],
+      "public_username": "vendedoresamericanasbr",
+      "source_title": "Americanas",
+      "avatar": "media/groups/americanas.jpg"
+    },
+    "3873753025": {
+      "telegram_id": "3873753025",
+      "title": "API e Automações",
+      "slug": "api-e-automacoes",
+      "description": "",
+      "default_tags": [],
+      "public_username": null,
+      "source_title": "API e Automações",
+      "avatar": "media/groups/api-e-automacoes.jpg"
+    },
+    "3607719426": {
+      "telegram_id": "3607719426",
+      "title": "ERP e Hubs",
+      "slug": "erp-e-hubs",
+      "description": "",
+      "default_tags": [],
+      "public_username": "erpehubs",
+      "source_title": "ERP e Hubs",
+      "avatar": "media/groups/erp-e-hubs.jpg"
+    },
+    "3984775418": {
+      "telegram_id": "3984775418",
+      "title": "Fiscal e Tributário",
+      "slug": "fiscal-e-tributario",
+      "description": "",
+      "default_tags": [],
+      "public_username": null,
+      "source_title": "Fiscal e Tributário",
+      "avatar": "media/groups/fiscal-e-tributario.jpg"
+    },
+    "3548549091": {
+      "telegram_id": "3548549091",
+      "title": "Importação",
+      "slug": "importacao",
+      "description": "",
+      "default_tags": [],
+      "public_username": null,
+      "source_title": "Importação",
+      "avatar": "media/groups/importacao.jpg"
+    },
+    "3921094365": {
+      "telegram_id": "3921094365",
+      "title": "Logística",
+      "slug": "logistica",
+      "description": "",
+      "default_tags": [],
+      "public_username": null,
+      "source_title": "Logística",
+      "avatar": "media/groups/logistica.jpg"
+    },
+    "3741853024": {
+      "telegram_id": "3741853024",
+      "title": "Magalu",
+      "slug": "magalu",
+      "description": "",
+      "default_tags": [],
+      "public_username": "vendedoresmagalubr",
+      "source_title": "Magalu",
+      "avatar": "media/groups/magalu.jpg"
+    },
+    "3404025476": {
+      "telegram_id": "3404025476",
+      "title": "Mercado Livre",
+      "slug": "mercado-livre",
+      "description": "",
+      "default_tags": [],
+      "public_username": "vendedoresml",
+      "source_title": "Mercado Livre",
+      "avatar": "media/groups/mercado-livre.jpg"
+    },
+    "3446866132": {
+      "telegram_id": "3446866132",
+      "title": "Plataformas de E-commerce",
+      "slug": "plataformas-de-e-commerce",
+      "description": "",
+      "default_tags": [],
+      "public_username": null,
+      "source_title": "Plataformas de E-commerce",
+      "avatar": "media/groups/plataformas-de-e-commerce.jpg"
+    },
+    "3705571714": {
+      "telegram_id": "3705571714",
+      "title": "Shein",
+      "slug": "shein",
+      "description": "",
+      "default_tags": [],
+      "public_username": "vendedoressheinbr",
+      "source_title": "Shein",
+      "avatar": "media/groups/shein.jpg"
+    },
+    "3912116655": {
+      "telegram_id": "3912116655",
+      "title": "Shopee",
+      "slug": "shopee",
+      "description": "",
+      "default_tags": [],
+      "public_username": "vendedoresshopeebr",
+      "source_title": "Shopee",
+      "avatar": "media/groups/shopee.jpg"
+    },
+    "3931467784": {
+      "telegram_id": "3931467784",
+      "title": "Temu",
+      "slug": "temu",
+      "description": "",
+      "default_tags": [],
+      "public_username": "vendedorestemubr",
+      "source_title": "Temu",
+      "avatar": "media/groups/temu.jpg"
+    },
+    "3850386299": {
+      "telegram_id": "3850386299",
+      "title": "TikTok Shop",
+      "slug": "tiktok-shop",
+      "description": "",
+      "default_tags": [],
+      "public_username": "vendedorestiktokshopbr",
+      "source_title": "TikTok Shop",
+      "avatar": "media/groups/tiktok-shop.jpg"
+    }
+  }
+}

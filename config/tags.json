@@ -1,0 +1,11 @@
+{
+  "marketplaces": ["mercado livre", "shopee", "amazon", "magalu", "americanas", "shein", "temu", "marketplace"],
+  "ads": ["google ads", "meta ads", "anuncio", "anúncio", "campanha", "trafego", "tráfego", "cpc", "roas", "conversao", "conversão"],
+  "logistica": ["logistica", "logística", "frete", "envio", "entrega", "transportadora", "correios", "full"],
+  "fiscal": ["nota fiscal", "nf", "imposto", "tributo", "icms", "simples", "cnpj", "fiscal"],
+  "erp-hubs": ["erp", "hub", "integracao", "integração", "bling", "tiny", "anymarket", "plugg"],
+  "importacao": ["importacao", "importação", "china", "fornecedor", "ali", "aliexpress", "compra internacional"],
+  "plataformas": ["plataforma", "loja virtual", "shopify", "woocommerce", "nuvemshop", "tray", "vtex"],
+  "api-automacoes": ["api", "automacao", "automação", "webhook", "bot", "script", "integração", "python"]
+}
+

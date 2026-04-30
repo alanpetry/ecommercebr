@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://alanpetry.github.io/ecommercebr/sitemap.xml
